@@ -105,10 +105,6 @@ public class MainForSpring {
 	private static void processListCommand() {
 		SelectService selSvc =ctx.getBean("getSelectService",SelectService.class);
 		selSvc.selectAll();
-//		Map<String, Member> map = selSvc.selectAll();
-//		for(Entry<String, Member> m : map.entrySet()) {
-//			System.out.println(m.getKey()+">>>>>>"+m.getValue());
-//		}
 	}
 	private static void processInfoCommand(String[] arg) {
 		if(arg.length !=2) {

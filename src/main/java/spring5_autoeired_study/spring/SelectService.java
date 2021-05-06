@@ -16,8 +16,8 @@ public class SelectService {
 	}
 	
 	@Autowired
-	public void setPrint(MemberPrint print) {
-		this.print = print;
+	public void setPrint(MemberPrint getMemberPrint) {
+		this.print = getMemberPrint;
 	}
 
 	public void selectAll() {
