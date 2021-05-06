@@ -23,7 +23,7 @@ public class AppCtx1 {
 	}
 	
 	@Bean
-	@Qualifier("printer1") //타입말고 다른 식별자로 명시하는 방법
+	@Qualifier("printer1") //타입말고 다른 식별자로 명시하는 방법 이다.
 	public MemberPrint getMemberPrint1() {
 		return new MemberPrn1();
 	}
