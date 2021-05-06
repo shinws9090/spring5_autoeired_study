@@ -12,7 +12,13 @@ public class MemberRegisterService {
 	private MemberDao memberDao; //연관관계 ,메소드에 매계변수로만 있으면 의존관계
 
 	
+	public MemberRegisterService() {
+	}
 	
+	public MemberRegisterService(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	}
+
 	public Long regist(RegisterRequst req) {
 		Member member = memberDao.selectByEmail(req.getEmail());
 		if(member != null) {

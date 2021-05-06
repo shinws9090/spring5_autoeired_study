@@ -27,8 +27,7 @@ public class AppCtx2 {
 	}
 	@Bean
 	public MemberInfoPrint getMemberInfoPrint() {
-		MemberInfoPrint infoPrint = new MemberInfoPrint();
-		return infoPrint;
+		return new MemberInfoPrint();
 	}
 	@Bean
 	public VersionPrint versionPrint() {

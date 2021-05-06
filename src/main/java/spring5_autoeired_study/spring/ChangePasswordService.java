@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import spring5_autoeired_study.exception.MemberNotFoundException;
 
 public class ChangePasswordService {
+	
 	@Autowired
 	private MemberDao memberDao; //연관관계 ,메소드에 매계변수로만 있으면 의존관계
 

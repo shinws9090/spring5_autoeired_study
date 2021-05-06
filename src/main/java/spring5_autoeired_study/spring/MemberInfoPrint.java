@@ -6,9 +6,7 @@ import spring5_autoeired_study.exception.MemberNotFoundException;
 
 public class MemberInfoPrint {
 	
-	@Autowired //setter() 대용 자동주입기능 @bean 설정되어있는것만
 	private MemberDao memberDao;
-	@Autowired
 	private MemberPrint print;
 	
 	public void printMemberInfo(String email) {
@@ -18,6 +16,17 @@ public class MemberInfoPrint {
 		}
 		print.print(member);
 		System.out.println();
+	}
+	
+	@Autowired //메서드에도 사용가능
+	public void setMemberDao(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	}
+	
+	@Autowired
+//	@Qualifier("printer") // 타입말고 설정파일에서 식별자 지정 해 노은걸로 확인함
+	public void setPrint(MemberPrint print) {
+		this.print = print;
 	}
 	
 }
